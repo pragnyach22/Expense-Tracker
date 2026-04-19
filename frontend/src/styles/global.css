@@ -1,0 +1,21 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #f0f7f4;
+  color: #1a3028;
+  min-height: 100vh;
+}
+:root {
+  --mint:  #e8f5f0; --mint2: #c8e6d8; --mint3: #4caf85; --mint4: #2e7d5e;
+  --lav:   #f0edf8; --lav2:  #c8bfe8; --lav3:  #7c5cbf;
+  --peach: #fef3ee; --peach2:#fdd5ba; --peach3:#f07a3a;
+  --sky:   #eaf4fb; --sky2:  #b8d9f0; --sky3:  #3a8cc4;
+  --lem:   #fefbe8; --lem2:  #f5e08a; --lem3:  #c49a1a;
+  --white: #ffffff;
+  --gray1: #f7faf8; --gray2: #e8f0ec; --gray3: #9eb8ac; --gray4: #5a7a6c;
+  --dark:  #1a3028;
+  --card-shadow: 0 2px 12px rgba(0,60,40,0.07);
+  --card-shadow2: 0 4px 20px rgba(0,60,40,0.12);
+  --radius: 14px; --radius2: 10px; --radius3: 8px;
+}
+input, select, textarea, button { font-family: 'Nunito', sans-serif; }
