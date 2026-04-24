@@ -4,7 +4,6 @@ import toast from 'react-hot-toast';
 
 const fmtMoney = v => '₹' + Number(v).toLocaleString('en-IN', { minimumFractionDigits:2, maximumFractionDigits:2 });
 const fmtDate  = d => new Date(d).toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric' });
-const currentYM = () => { const n=new Date(); return `${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,'0')}`; };
 const BADGE_COLORS = ['#e8f5f0:#2e7d5e','#eaf4fb:#1a5a8a','#fef3ee:#b05a1a','#f0edf8:#5c3a9e','#fefbe8:#7a5c10','#fde8e8:#8b1a1a'];
 const badge = (name, i) => {
   const [bg, col] = BADGE_COLORS[i % BADGE_COLORS.length].split(':');
@@ -14,7 +13,7 @@ const badge = (name, i) => {
 export default function ExpenseList({ user, onEdit }) {
   const [exps, setExps]     = useState([]);
   const [cats, setCats]     = useState([]);
-  const [month, setMonth]   = useState(currentYM());
+  const [month, setMonth]   = useState('');
   const [catFilter, setCatFilter] = useState('');
 
   const load = () => {
@@ -52,7 +51,7 @@ export default function ExpenseList({ user, onEdit }) {
         {exps.length === 0 ? (
           <div style={{ textAlign:'center', padding:'3rem 1rem', color:'#9eb8ac' }}>
             <div style={{ fontSize:'2.5rem', marginBottom:'.75rem' }}>🌿</div>
-            <p>No expenses found for this period</p>
+            <p>No expenses found</p>
           </div>
         ) : (
           <div style={{ overflowX:'auto' }}>
