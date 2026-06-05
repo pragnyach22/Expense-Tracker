@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000' });
+const API = axios.create({
+  baseURL: 'https://expense-tracker-api-gld0.onrender.com'
+});
 
 // Auth
 export const register  = (d) => API.post('/register', d);
