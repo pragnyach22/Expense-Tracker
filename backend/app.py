@@ -7,6 +7,9 @@ from routes.budget import budget_bp
 from routes.reports import reports_bp
 from routes.alerts import alerts_bp
 import db
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
